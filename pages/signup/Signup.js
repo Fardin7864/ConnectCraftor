@@ -2,6 +2,7 @@ import { Icon, Input, Button } from "@rneui/themed";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useState } from "react";
 import { Text, View } from "react-native";
+import Logo from "../../components/logo/Logo";
 
 const Signup = ({ navigation }) => {
     const [formData, setFormData] = useState({
@@ -29,9 +30,10 @@ const Signup = ({ navigation }) => {
       start={{ y: 1, x: 0.9 }}
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
     >
+        <Logo/>
       <View
         style={{
-          width: "80%",
+          width: "90%",
           padding: 20,
           borderRadius: 10,
           borderWidth: 0.5,
@@ -39,7 +41,7 @@ const Signup = ({ navigation }) => {
       >
         <Text
           style={{
-            fontSize: 40,
+            fontSize: 20,
             color: '#FF9800',
             fontWeight: "700",
             alignSelf: "center",
@@ -48,25 +50,28 @@ const Signup = ({ navigation }) => {
           Sign Up
         </Text>
         <Input
+          autoCapitalize="words"
           placeholder="Enter Your Name"
-          inputStyle={{ color: "white", fontSize: 20 }}
-          labelStyle={{ color: "#fff", fontSize: 25 }}
+          inputStyle={{ color: "white", fontSize: 13 }}
+          labelStyle={{ color: "#fff", fontSize: 15 }}
           label="Name"
           placeholderTextColor="#FAE7F3"
           onChangeText={(value) => onChange({target:{name:'name',value}})}
         />
         <Input
+        autoCapitalize="none"
           placeholder="Email"
-          inputStyle={{ color: "white", fontSize: 20 }}
-          labelStyle={{ color: "#fff", fontSize: 25 }}
+          inputStyle={{ color: "white", fontSize: 13 }}
+          labelStyle={{ color: "#fff", fontSize: 15 }}
           label="Email"
           placeholderTextColor="#FAE7F3"
           onChangeText={(value) => onChange({target:{name:'email',value}})}
         />
         <Input
+         secureTextEntry={true}
           placeholder="Password"
-          inputStyle={{ color: "white", fontSize: 20 }}
-          labelStyle={{ color: "#fff", fontSize: 25 }}
+          inputStyle={{ color: "white", fontSize: 13 }}
+          labelStyle={{ color: "#fff", fontSize: 15 }}
           label="Password"
           placeholderTextColor="#FAE7F3"
           onChangeText={(value) => onChange({target:{name:'password',value}})}
@@ -79,12 +84,12 @@ const Signup = ({ navigation }) => {
             end: { x: 1, y: 0.5 },
           }}
           radius={50}
-          titleStyle={{fontSize: 20, fontWeight: '700'}}
+          titleStyle={{fontSize: 15, fontWeight: '700'}}
           onPress={handleSubmit}
         >
          Sign Up
         </Button>
-        <Text style={{fontSize: 18 , color: "yellow", alignSelf: 'center', marginTop: 10}}>Already have acount? <Text onPress={() => navigation.navigate('Signin')} style={{fontSize: 19, color: "#F44336"}}>Sign In</Text></Text>
+        <Text style={{fontSize: 10 , color: "yellow", alignSelf: 'center', marginTop: 10}}>Already have acount? <Text onPress={() => navigation.navigate('Signin')} style={{fontSize: 12, color: "#F44336"}}>Sign In</Text></Text>
       </View>
     </LinearGradient>
   );
