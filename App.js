@@ -6,6 +6,7 @@ import Signup from './pages/signup/Signup';
 import Signin from './pages/signin/Signin';
 // import NativeAnimatedHelper from '../NativeAnimatedHelper';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import Home from './pages/home/Home';
 
 
 
@@ -15,15 +16,20 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName='Signin'
+      initialRouteName='Home'
       screenOptions={{
         headerShown: false
         }}
         >
-        {/* <KeyboardAwareScrollView> */}
+        <Stack.Screen 
+        name='Home' 
+        component={Home} 
+        options={{
+          header: true
+        }}
+        />
         <Stack.Screen name='Signup' component={Signup} />
         <Stack.Screen name='Signin' component={Signin} />
-      {/* </KeyboardAwareScrollView> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
