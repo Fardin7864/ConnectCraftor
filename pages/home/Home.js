@@ -16,7 +16,7 @@ const Home = () => {
             start={{ y: 1, x: 0.9 }}
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
           >
-            <Header headerName="Home"/>
+            {/* <Header headerName="Home"/> */}
             <View>
               <Text>This is Home!</Text>
             </View>
