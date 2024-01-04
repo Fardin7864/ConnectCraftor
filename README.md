@@ -10,48 +10,39 @@ Before you begin, make sure you have [Node.js](https://nodejs.org/) and [Expo CL
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/connect-task.git
-Navigate to the project directory:
+   [git clone](https://github.com/Fardin7864/ConnectCraftor.git)
 
-bash
-Copy code
+- Navigate to the project directory:
+
 cd connect-task
-Install dependencies:
 
-bash
-Copy code
+## Install dependencies:
+
 npm install
-Usage
+## Usage
 To start the development server and run the app, use the following commands:
 
-bash
-Copy code
 npm start
+
 This will open the Expo DevTools in your default web browser. You can then choose to run the app on an emulator/simulator or a physical device.
 
-Scripts
-Start the development server:
+## Scripts
 
-bash
-Copy code
+### Start the development server:
 npm start
-Run on Android:
 
-bash
-Copy code
+
+### Run on Android:
+
 npm run android
-Run on iOS:
 
-bash
-Copy code
+### Run on iOS:
 npm run ios
-Run on web:
 
-bash
-Copy code
+### Run on web: 
 npm run web
-Dependencies
+
+## Dependencies
 @expo/vector-icons
 @react-native-community/viewpager
 @react-navigation/bottom-tabs
